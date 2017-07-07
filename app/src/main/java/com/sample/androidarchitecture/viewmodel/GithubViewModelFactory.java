@@ -7,11 +7,11 @@ import java.util.Map;
 
 import javax.inject.Provider;
 
-public class GithubViewmodelFactory implements ViewModelProvider.Factory {
+public class GithubViewModelFactory implements ViewModelProvider.Factory {
 
     private final Map<Class<? extends ViewModel>, Provider<ViewModel>> creators;
 
-    public GithubViewmodelFactory(Map<Class<? extends ViewModel>, Provider<ViewModel>> creators) {
+    public GithubViewModelFactory(Map<Class<? extends ViewModel>, Provider<ViewModel>> creators) {
         this.creators = creators;
     }
 
