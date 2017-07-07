@@ -4,6 +4,8 @@ import android.support.v4.app.FragmentManager;
 
 import com.sample.androidarchitecture.R;
 import com.sample.androidarchitecture.ui.MainActivity;
+import com.sample.androidarchitecture.ui.activity.repo.RepoFragment;
+import com.sample.androidarchitecture.ui.activity.search.SearchFragment;
 
 import javax.inject.Inject;
 
@@ -22,18 +24,27 @@ public class NavigationController {
      * Go to Search fragment.
      */
     public void navigationToSearch() {
-        // TODO: goto search fragment
+        SearchFragment searchFragment = new SearchFragment();
+        fragmentManager.beginTransaction()
+                .replace(containerId, searchFragment)
+                .commitAllowingStateLoss();
     }
 
     /**
      * Go to Repo fragment.
      */
-    public void navigationToRepo() {
-        // TODO: goto repo fragment
+    public void navigationToRepo(String owner, String name) {
+        RepoFragment fragment = RepoFragment.create(owner, name);
+        String tag = "repo" + "/" + owner + "/" + name;
+        fragmentManager.beginTransaction()
+                .replace(containerId, fragment, tag)
+                .addToBackStack(null)
+                .commitAllowingStateLoss();
     }
 
     /**
      * Go to User fragment.
+     *
      * @param login
      */
     public void navigationToUser(String login) {
