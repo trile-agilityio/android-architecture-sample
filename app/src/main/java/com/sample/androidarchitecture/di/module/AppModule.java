@@ -1,5 +1,11 @@
 package com.sample.androidarchitecture.di.module;
 
+import android.app.Application;
+import android.arch.persistence.room.Room;
+
+import com.sample.androidarchitecture.db.dao.RepoDao;
+import com.sample.androidarchitecture.db.dao.UserDao;
+import com.sample.androidarchitecture.db.database.GithubDb;
 import com.sample.androidarchitecture.networking.api.IGithubApi;
 import com.sample.androidarchitecture.util.common.LiveDataCallAdapterFactory;
 
@@ -23,5 +29,23 @@ public class AppModule {
                 .addCallAdapterFactory(new LiveDataCallAdapterFactory())
                 .build()
                 .create(IGithubApi.class);
+    }
+
+    @Singleton
+    @Provides
+    GithubDb provideGithubDb(Application application) {
+        return Room.databaseBuilder(application, GithubDb.class, "github.db").build();
+    }
+
+    @Singleton
+    @Provides
+    UserDao provideUserDao(GithubDb db) {
+        return db.userDao();
+    }
+
+    @Singleton
+    @Provides
+    RepoDao providerRepoDao(GithubDb db) {
+        return db.repoDao();
     }
 }

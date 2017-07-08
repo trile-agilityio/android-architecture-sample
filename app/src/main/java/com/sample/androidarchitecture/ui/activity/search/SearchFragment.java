@@ -36,11 +36,11 @@ public class SearchFragment extends LifecycleFragment {
     @Inject
     NavigationController navigationController;
 
-    private DataBindingComponent dataBindingComponent =
+    DataBindingComponent dataBindingComponent =
             new FragmentDataBindingComponent(this);
-    private AutoClearedValue<SearchFragmentBinding> binding;
-    private AutoClearedValue<RepoListAdapter> adapter;
-    private SearchViewModel searchViewModel;
+    AutoClearedValue<SearchFragmentBinding> binding;
+    AutoClearedValue<RepoListAdapter> adapter;
+    SearchViewModel searchViewModel;
 
     @Nullable
     @Override

@@ -28,9 +28,8 @@ public class User {
     @SerializedName("blog")
     public String blog;
 
-    public User(String id, String login, String avatarUrl, String name,
-                String company, String reposUrl, String blog) {
-        this.id = id;
+    public User(String login, String avatarUrl, String name, String company,
+                String reposUrl, String blog) {
         this.login = login;
         this.avatarUrl = avatarUrl;
         this.name = name;

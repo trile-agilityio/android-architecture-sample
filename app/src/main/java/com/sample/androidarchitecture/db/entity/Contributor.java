@@ -26,12 +26,10 @@ public class Contributor {
 
     private String repoOwner;
 
-    public Contributor(String login, int contributions, String avatarUrl, String repoName, String repoOwner) {
+    public Contributor(String login, int contributions, String avatarUrl) {
         this.login = login;
         this.contributions = contributions;
         this.avatarUrl = avatarUrl;
-        this.repoName = repoName;
-        this.repoOwner = repoOwner;
     }
 
     public String getLogin() {

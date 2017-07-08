@@ -29,7 +29,7 @@ public class Repo {
     @Embedded(prefix = "owner_")
     public final Owner owner;
 
-    public Repo(int id, String name, String fullName, String description, int stars, Owner owner) {
+    public Repo(int id, String name, String fullName, String description, Owner owner, int stars) {
         this.id = id;
         this.name = name;
         this.fullName = fullName;
