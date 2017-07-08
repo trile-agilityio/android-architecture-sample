@@ -7,7 +7,7 @@
 
         <variable
             name="contributor"
-            type="com.sample.androidarchitecture.data.local.entity.Contributor"
+            type="com.sample.androidarchitecture.db.entity.Contributor"
             tools:layout_conversion_absoluteHeight="0dp"
             tools:layout_conversion_absoluteWidth="0dp"
             tools:layout_conversion_absoluteX="0dp"

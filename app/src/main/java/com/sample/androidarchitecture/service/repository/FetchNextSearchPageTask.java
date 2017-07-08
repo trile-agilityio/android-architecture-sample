@@ -2,8 +2,8 @@ package com.sample.androidarchitecture.service.repository;
 
 import android.arch.lifecycle.MutableLiveData;
 
-import com.sample.androidarchitecture.data.local.database.GithubDb;
-import com.sample.androidarchitecture.data.local.entity.RepoSearchResult;
+import com.sample.androidarchitecture.db.database.GithubDb;
+import com.sample.androidarchitecture.db.entity.RepoSearchResult;
 import com.sample.androidarchitecture.networking.api.IGithubApi;
 import com.sample.androidarchitecture.networking.base.ResponseApi;
 import com.sample.androidarchitecture.networking.response.RepoSearchResponse;

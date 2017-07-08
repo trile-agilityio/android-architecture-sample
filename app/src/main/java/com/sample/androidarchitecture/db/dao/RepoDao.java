@@ -1,4 +1,4 @@
-package com.sample.androidarchitecture.data.local.dao;
+package com.sample.androidarchitecture.db.dao;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.Transformations;
@@ -8,9 +8,9 @@ import android.arch.persistence.room.OnConflictStrategy;
 import android.arch.persistence.room.Query;
 import android.util.SparseIntArray;
 
-import com.sample.androidarchitecture.data.local.entity.Contributor;
-import com.sample.androidarchitecture.data.local.entity.Repo;
-import com.sample.androidarchitecture.data.local.entity.RepoSearchResult;
+import com.sample.androidarchitecture.db.entity.Contributor;
+import com.sample.androidarchitecture.db.entity.Repo;
+import com.sample.androidarchitecture.db.entity.RepoSearchResult;
 
 import java.util.Collections;
 import java.util.List;
@@ -33,7 +33,7 @@ public abstract class RepoDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     public abstract void insert(RepoSearchResult searchResult);
 
-    @Query("SELECT * FROM repo WHERE owner_login :login AND name = :name")
+    @Query("SELECT * FROM repo WHERE owner_login = :login AND name = :name")
     public abstract LiveData<Repo> loadRepo(String login, String name);
 
     @Query("SELECT login, avatarUrl, contributions FROM contributor "

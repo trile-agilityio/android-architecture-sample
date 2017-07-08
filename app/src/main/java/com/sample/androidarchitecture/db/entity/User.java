@@ -1,4 +1,4 @@
-package com.sample.androidarchitecture.data.local.entity;
+package com.sample.androidarchitecture.db.entity;
 
 import android.arch.persistence.room.Entity;
 

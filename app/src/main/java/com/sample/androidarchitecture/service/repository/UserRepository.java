@@ -4,8 +4,8 @@ import android.arch.lifecycle.LiveData;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
-import com.sample.androidarchitecture.data.local.dao.UserDao;
-import com.sample.androidarchitecture.data.local.entity.User;
+import com.sample.androidarchitecture.db.dao.UserDao;
+import com.sample.androidarchitecture.db.entity.User;
 import com.sample.androidarchitecture.networking.api.IGithubApi;
 import com.sample.androidarchitecture.networking.base.ResponseApi;
 import com.sample.androidarchitecture.util.common.AppExecutors;

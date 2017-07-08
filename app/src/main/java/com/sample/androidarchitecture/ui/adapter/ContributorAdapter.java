@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import com.sample.androidarchitecture.R;
-import com.sample.androidarchitecture.data.local.entity.Contributor;
+import com.sample.androidarchitecture.db.entity.Contributor;
 import com.sample.androidarchitecture.databinding.ContributorItemBinding;
 import com.sample.androidarchitecture.ui.common.DataBoundListAdapter;
 

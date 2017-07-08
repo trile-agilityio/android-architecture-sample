@@ -1,4 +1,4 @@
-package com.sample.androidarchitecture.data.local.entity;
+package com.sample.androidarchitecture.db.entity;
 
 import android.arch.persistence.room.Embedded;
 import android.arch.persistence.room.Entity;
@@ -39,8 +39,10 @@ public class Repo {
     }
 
     public static class Owner {
+
         @SerializedName("login")
         public final String login;
+
         @SerializedName("url")
         public final String url;
 

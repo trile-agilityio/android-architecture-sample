@@ -5,11 +5,11 @@ import android.arch.lifecycle.Transformations;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
-import com.sample.androidarchitecture.data.local.dao.RepoDao;
-import com.sample.androidarchitecture.data.local.database.GithubDb;
-import com.sample.androidarchitecture.data.local.entity.Contributor;
-import com.sample.androidarchitecture.data.local.entity.Repo;
-import com.sample.androidarchitecture.data.local.entity.RepoSearchResult;
+import com.sample.androidarchitecture.db.dao.RepoDao;
+import com.sample.androidarchitecture.db.database.GithubDb;
+import com.sample.androidarchitecture.db.entity.Contributor;
+import com.sample.androidarchitecture.db.entity.Repo;
+import com.sample.androidarchitecture.db.entity.RepoSearchResult;
 import com.sample.androidarchitecture.networking.api.IGithubApi;
 import com.sample.androidarchitecture.networking.base.ResponseApi;
 import com.sample.androidarchitecture.networking.response.RepoSearchResponse;

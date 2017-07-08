@@ -3,6 +3,7 @@ package com.sample.androidarchitecture.ui.activity.search;
 import android.arch.lifecycle.LifecycleFragment;
 import android.arch.lifecycle.ViewModelProvider;
 import android.arch.lifecycle.ViewModelProviders;
+import android.databinding.DataBindingComponent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -35,7 +36,7 @@ public class SearchFragment extends LifecycleFragment {
     @Inject
     NavigationController navigationController;
 
-    private android.databinding.DataBindingComponent dataBindingComponent =
+    private DataBindingComponent dataBindingComponent =
             new FragmentDataBindingComponent(this);
     private AutoClearedValue<SearchFragmentBinding> binding;
     private AutoClearedValue<RepoListAdapter> adapter;
@@ -58,12 +59,14 @@ public class SearchFragment extends LifecycleFragment {
         super.onActivityCreated(savedInstanceState);
 
         // View model
-        searchViewModel = ViewModelProviders.of(this, viewModelFactory).get(SearchViewModel.class);
+        searchViewModel = ViewModelProviders.of(this, viewModelFactory)
+                .get(SearchViewModel.class);
+
         initRecyclerView();
 
         // Repository adapter
         RepoListAdapter repoAdapter = new RepoListAdapter(dataBindingComponent, true,
-                repo -> navigationController.navigationToRepo());
+                repo -> navigationController.navigationToRepo(repo.owner.login, repo.name));
         binding.get().repoList.setAdapter(repoAdapter);
 
         initSearchInputListener();

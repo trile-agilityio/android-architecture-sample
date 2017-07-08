@@ -3,7 +3,7 @@ package com.sample.androidarchitecture.networking.response;
 import android.support.annotation.NonNull;
 
 import com.google.gson.annotations.SerializedName;
-import com.sample.androidarchitecture.data.local.entity.Repo;
+import com.sample.androidarchitecture.db.entity.Repo;
 
 import java.util.ArrayList;
 import java.util.List;

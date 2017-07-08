@@ -1,5 +1,6 @@
 package com.sample.androidarchitecture.ui.common;
 
+import android.annotation.SuppressLint;
 import android.databinding.ViewDataBinding;
 import android.os.AsyncTask;
 import android.support.annotation.MainThread;
@@ -30,6 +31,7 @@ public abstract class DataBoundListAdapter<T, V extends ViewDataBinding>
         holder.binding.executePendingBindings();
     }
 
+    @SuppressLint("StaticFieldLeak")
     @MainThread
     public void replace(List<T> update) {
 

@@ -6,7 +6,7 @@ import android.arch.lifecycle.Transformations;
 import android.arch.lifecycle.ViewModel;
 import android.support.annotation.NonNull;
 
-import com.sample.androidarchitecture.data.local.entity.Repo;
+import com.sample.androidarchitecture.db.entity.Repo;
 import com.sample.androidarchitecture.service.repository.RepoRepository;
 import com.sample.androidarchitecture.util.common.AbsentLiveData;
 import com.sample.androidarchitecture.util.common.Resource;

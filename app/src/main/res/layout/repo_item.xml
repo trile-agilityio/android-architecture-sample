@@ -11,7 +11,7 @@
 
         <variable
             name="repo"
-            type="com.sample.androidarchitecture.data.local.entity.Repo" />
+            type="com.sample.androidarchitecture.db.entity.Repo" />
     </data>
 
     <android.support.v7.widget.CardView

@@ -5,8 +5,8 @@ import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.Transformations;
 import android.arch.lifecycle.ViewModel;
 
-import com.sample.androidarchitecture.data.local.entity.Contributor;
-import com.sample.androidarchitecture.data.local.entity.Repo;
+import com.sample.androidarchitecture.db.entity.Contributor;
+import com.sample.androidarchitecture.db.entity.Repo;
 import com.sample.androidarchitecture.service.repository.RepoRepository;
 import com.sample.androidarchitecture.util.common.AbsentLiveData;
 import com.sample.androidarchitecture.util.common.Resource;
